@@ -25,9 +25,11 @@ def new_dog(request):
     return redirect('/')
 
 def select(request, dog_id):
-     
-    # print current_dog
+    current_dog = Dog.objects.filter(id=dog_id)
+    print current_dog
     context = {
-        "current_dog" : Dog.objects.filter(id=dog_id)
+        "avail_dogs" : Dog.objects.exclude(adopted=True),
+        'current_dog' : current_dog,
+
     }
-    return redirect('/', context)
+    return render(request, 'semi_restful_app/index.html', context)

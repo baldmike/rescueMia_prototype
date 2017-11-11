@@ -37,17 +37,17 @@
             </div>
 
             <div class="col-md-6 right box">
-                {% for dog in current_dogs %}
+                {% for dog in current_dog %}
                 <h1>{{ dog.name }}'s info:</h1>
                 <h3>Age: {{ dog.age }}</h3>
                 <h3>Color: {{ dog.color }}</h3>
                 <h3>Size: {{ dog.size }}</h3>
                 <h3>Fixed: {{ dog.fixed }}</h3>
                 <h3>Vaccine Date: {{ dog.vaccine }}</h3>
+                {% endfor %}
                 
                 <hr>
                 
-                {% endfor %}
                 
             </div>
 

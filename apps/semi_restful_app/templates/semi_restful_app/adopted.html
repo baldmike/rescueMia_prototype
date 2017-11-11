@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name='viewport' content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'semi_restful_app/css/styles.css' %}" media="screen" title="TITLE" charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"                     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="{% static 'APP_NAME/JAVASCRIPT_FILENAME.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-inverted">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">RescueMia!</a>
+                </div>
+                <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="#">Adopted</a></li>
+                <!-- <li><a href="#">Today</a></li>
+                <li><a href="#">This Week</a></li>
+                <li><a href="#">Vaccines</a></li> -->
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            
+            <div class="col-md-6 left box">
+                <h1 style="text-align: center;">Adopted Dogs!</h1>   
+                {% for dog in adopted_dogs %}
+                <h3>{{ dog.id }} - <a href="/select_adopted/{{ dog.id }}">{{ dog.name }}</a><span style="float: right"><a href="/available/{{ dog.id }}">Available</a></span></h3>
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 right box">
+                <h1>Selected Dog:</h1>
+                {% for dog in current_dog %}
+                <h1>{{ dog.name }}'s info:</h1>
+                <h3>Age: {{ dog.age }}</h3>
+                <h3>Color: {{ dog.color }}</h3>
+                <h3>Size: {{ dog.size }}</h3>
+                <h3>Fixed: {{ dog.fixed }}</h3>
+                <h3>Vaccine Date: {{ dog.vaccine }}</h3>
+                {% endfor %}
+                
+                <hr>
+                
+                
+            </div>
+
+        </div>
+    </div>
+</body>

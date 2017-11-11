@@ -20,23 +20,24 @@
                 </div>
                 <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Dogs</a></li>
-                <li><a href="#">Today</a></li>
+                <li><a href="/adopted_dogs">Adopted</a></li>
+                <!-- <li><a href="#">Today</a></li>
                 <li><a href="#">This Week</a></li>
-                <li><a href="#">Vaccines</a></li>
+                <li><a href="#">Vaccines</a></li> -->
                 </ul>
             </div>
         </nav>
         <div class="row">
             
             <div class="col-md-6 left box">
-                <h1>Dogs!</h1>   
+                <h1 style="text-align: center;">Available Dogs!</h1>   
                 {% for dog in avail_dogs %}
-                <h3>{{ dog.id }} - <a href="/select/{{ dog.id }}">{{ dog.name }}</a></h3>
+                <h3>{{ dog.id }} - <a href="/select/{{ dog.id }}">{{ dog.name }}</a><span style="float: right"><a href="/adopted/{{ dog.id }}">adopt!</a></span></h3>
                 {% endfor %}
             </div>
 
             <div class="col-md-6 right box">
+                <h1>Selected Dog:</h1>
                 {% for dog in current_dog %}
                 <h1>{{ dog.name }}'s info:</h1>
                 <h3>Age: {{ dog.age }}</h3>

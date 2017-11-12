@@ -9,7 +9,7 @@
     font-size: 12px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: pink;
+    background-color: lightgray;
     height: 400px;
     overflow: scroll;
 }

@@ -9,7 +9,7 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('semi_restful_app', '0001_initial'),
+        ('rescue_mia_app', '0001_initial'),
     ]
 
     operations = [

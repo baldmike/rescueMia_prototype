@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('semi_restful_app', '0002_dog_vaccine'),
+        ('rescue_mia_app', '0002_dog_vaccine'),
     ]
 
     operations = [

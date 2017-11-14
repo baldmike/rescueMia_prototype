@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.semi_restful_app',
+    'apps.rescue_mia_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

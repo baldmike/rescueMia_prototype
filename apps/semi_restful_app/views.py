@@ -10,7 +10,7 @@ def index(request):
     context = {
         "avail_dogs" : Dog.objects.exclude(adopted=True),
     }
-    return render(request, 'semi_restful_app/index.html', context)
+    return render(request, 'rescue_mia_app/index.html', context)
 
 def new_dog(request):
     if request.method == 'POST':
@@ -33,7 +33,7 @@ def select(request, dog_id):
         'current_dog' : current_dog,
 
     }
-    return render(request, 'semi_restful_app/index.html', context)
+    return render(request, 'rescue_mia_app/index.html', context)
 
 def select_adopted(request, dog_id):
     current_dog = Dog.objects.filter(id=dog_id)
@@ -44,7 +44,7 @@ def select_adopted(request, dog_id):
         'current_dog' : current_dog,
 
     }
-    return render(request, 'semi_restful_app/adopted.html', context)
+    return render(request, 'rescue_mia_app/adopted.html', context)
 
 def adopted(request, dog_id):
     adopted_dog = Dog.objects.get(id=dog_id)
@@ -61,7 +61,7 @@ def adopted_dogs(request):
 
     }
 
-    return render(request, 'semi_restful_app/adopted.html', context)
+    return render(request, 'rescue_mia_app/adopted.html', context)
 
 def available(request, dog_id):
     available_dog = Dog.objects.get(id=dog_id)

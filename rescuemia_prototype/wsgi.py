@@ -1,5 +1,5 @@
 """
-WSGI config for semi_restful2 project.
+WSGI config for rescuemia_prototype project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "semi_restful2.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "rescuemia_prototype.settings")
 
 application = get_wsgi_application()

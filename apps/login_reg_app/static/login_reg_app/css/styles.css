@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.placeholder {
+    font-size: 14px;
+}
+
+.loginbtn {
+    font-size: 10px;
+    border-radius: 5px;
+}
